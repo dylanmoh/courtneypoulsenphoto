@@ -1,0 +1,44 @@
+.social-media-icon {
+	padding: 0 5px;
+}
+.custom-logo-link {
+	padding: 0;
+	margin-left: calc(50% - (43.44px + 35.72px) - (264.969px / 2));
+}
+#logo_overlay {
+	position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+}
+#logo_overlay .custom-logo-link {
+	margin: 0;
+	position: absolute;
+	top: calc(50% - (87px / 2));
+	left: calc(50% - (264.953px / 2));
+}
+.site-branding {
+	padding: 0;
+}
+.social-media-icon .fa {
+	font-size: 30px;
+}
+.home-page-header {
+	width: 100%;
+	position: absolute;
+}
+.home-page-header .custom-logo-link {
+	display: none;
+}
+.hidden {
+	display: none;
+}
+/*NAV*/
+.nav-bar {
+	width: initial;
+	float: right;
+}
