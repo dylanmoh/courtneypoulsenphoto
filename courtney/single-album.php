@@ -15,7 +15,7 @@ $images = get_field('photo_album');
 ?>
 
 <div class="photo_album_wrap">
-	<div class="photo_album_wrap_div arrow_div">
+	<div class="photo_album_wrap_div arrow_div arrow_left">
 		<div class="left-arrow">
 			<i class="fa fa-chevron-left" aria-hidden="true"></i>
 		</div>
@@ -38,12 +38,12 @@ $images = get_field('photo_album');
 			</div>
 		<?php } ?>
 	</div>
-	<div class="photo_album_wrap_div arrow_div">
+	<div class="photo_album_wrap_div arrow_div arrow_right">
 		<div class="right-arrow">
 			<i class="fa fa-chevron-right" aria-hidden="true"></i>
 		</div>
 	</div>
-</div><!-- .wrap -->
+</div>
 
 <!-- <div class="photo_gallery">
 		<?php if ($images) { ?>
@@ -53,6 +53,6 @@ $images = get_field('photo_album');
 		            </div>
         		<?php } ?>
 		<?php } ?>
-</div><!-- .wrap -->
+</div> -->
 
 <?php get_footer();

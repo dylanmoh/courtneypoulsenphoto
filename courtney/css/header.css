@@ -1,10 +1,30 @@
 .social-media-icon {
 	padding: 0 5px;
 }
-.custom-logo-link {
+
+.site-branding .custom-logo-link {
 	padding: 0;
+	top: calc(50% - (80px / 2));
 	margin-left: calc(50% - (43.44px + 35.72px) - (264.969px / 2));
 }
+
+.site-branding .custom-logo {
+	max-width: 350px;
+	max-height: 80px;
+}
+
+@media (max-width: 520px) {
+	.site-branding .custom-logo-link {
+		top: calc(50% - (45.28px / 2));
+		margin-left: calc(50% - (43.44px + 35.72px) - (149.92px / 2));
+	}
+
+	.site-branding .custom-logo {
+		max-width: 150px;
+		max-height: 45.28px;
+	}
+}
+
 #logo_overlay {
 	position: fixed;
     width: 100%;
@@ -18,8 +38,8 @@
 #logo_overlay .custom-logo-link {
 	margin: 0;
 	position: absolute;
-	top: calc(50% - (87px / 2));
-	left: calc(50% - (264.953px / 2));
+	top: calc(50% - (125px / 2));
+	left: calc(50% - (415px / 2));
 }
 .site-branding {
 	padding: 0;

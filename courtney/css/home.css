@@ -4,3 +4,13 @@
 #content {
 	padding: 0;
 }
+
+.logo_overlay .custom-logo-link {
+	top: calc(50% - (125px / 2));
+    left: calc(50% - (415px / 2));
+}
+
+.logo_overlay .custom-logo {
+	max-width: 415px;
+	max-height: 125px;
+}
