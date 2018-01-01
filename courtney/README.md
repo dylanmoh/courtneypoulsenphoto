@@ -1,4 +1,4 @@
-# Shapely
+# Courtney
 
 [![Build Status](https://travis-ci.org/puikinsh/shapely.svg?branch=master)](https://travis-ci.org/MachoThemes/shapely)
 
