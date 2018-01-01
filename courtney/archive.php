@@ -1,45 +1,61 @@
 <?php
 /**
- * The template for displaying archive pages.
+ * The template for displaying archive pages
  *
- * @link    https://codex.wordpress.org/Template_Hierarchy
+ * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package Shapely
+ * @package WordPress
+ * @subpackage Twenty_Seventeen
+ * @since 1.0
+ * @version 1.0
  */
+
 get_header(); ?>
-<?php $layout_class = shapely_get_layout_class();?>
-	<div class="row">
+
+<div class="wrap">
+
+	<?php if ( have_posts() ) : ?>
+		<header class="page-header">
+			<?php
+				the_archive_title( '<h1 class="page-title">', '</h1>' );
+				the_archive_description( '<div class="taxonomy-description">', '</div>' );
+			?>
+		</header><!-- .page-header -->
+	<?php endif; ?>
+
+	<div id="primary" class="content-area">
+		<main id="main" class="site-main" role="main">
+
 		<?php
-		if ( 'sidebar-left' == $layout_class ) :
-			get_sidebar();
-		endif;
-		?>
-		<div id="primary" class="col-md-8 mb-xs-24 <?php echo esc_attr( $layout_class ); ?>"><?php
-		if ( have_posts() ) :
+		if ( have_posts() ) : ?>
+			<?php
+			/* Start the Loop */
+			while ( have_posts() ) : the_post();
 
-			if ( is_home() && ! is_front_page() ) : ?>
-					<header>
-						<h1 class="page-title screen-reader-text"><?php esc_html( single_post_title() ); ?></h1>
-					</header>
+				/*
+				 * Include the Post-Format-specific template for the content.
+				 * If you want to override this in a child theme, then include a file
+				 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
+				 */
+				get_template_part( 'template-parts/post/content', get_post_format() );
 
-					<?php
-				endif;
+			endwhile;
 
-			$layout_type = get_theme_mod( 'blog_layout_view', 'grid' );
-			$layout_type = str_replace( '_', '-', $layout_type );
+			the_posts_pagination( array(
+				'prev_text' => twentyseventeen_get_svg( array( 'icon' => 'arrow-left' ) ) . '<span class="screen-reader-text">' . __( 'Previous page', 'twentyseventeen' ) . '</span>',
+				'next_text' => '<span class="screen-reader-text">' . __( 'Next page', 'twentyseventeen' ) . '</span>' . twentyseventeen_get_svg( array( 'icon' => 'arrow-right' ) ),
+				'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'twentyseventeen' ) . ' </span>',
+			) );
 
-			get_template_part( 'template-parts/layouts/blog', $layout_type );
+		else :
 
-			shapely_pagination();
-			else :
-				get_template_part( 'template-parts/content', 'none' );
+			get_template_part( 'template-parts/post/content', 'none' );
 
-			endif; ?>
-		</div><!-- #primary -->
-		<?php
-		if ( 'sidebar-right' == $layout_class ) :
-			get_sidebar();
 		endif; ?>
-	</div>
-<?php
-get_footer();
+
+		</main><!-- #main -->
+	</div><!-- #primary -->
+	<?php get_sidebar(); ?>
+</div><!-- .wrap -->
+
+<?php get_footer();
