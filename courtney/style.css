@@ -3494,7 +3494,7 @@ object {
 	}
 
 	.main-navigation a {
-		padding: 1em 1.25em;
+		padding: 2em 3em;
 	}
 
 	.main-navigation ul ul {
@@ -3503,7 +3503,7 @@ object {
 		left: -999em;
 		padding: 0;
 		position: absolute;
-		top: 100%;
+		top: 73%;
 		z-index: 99999;
 	}
 
@@ -3517,8 +3517,8 @@ object {
 		display: none;
 		height: 0;
 		position: absolute;
-		right: 1em;
-		bottom: -1px;
+		right: 5em;
+		bottom: 23px;
 		width: 0;
 		z-index: 100000;
 	}
@@ -3537,7 +3537,8 @@ object {
 	.main-navigation ul li.menu-item-has-children:before,
 	.main-navigation ul li.page_item_has_children:before {
 		border-color: transparent transparent #bbb;
-		bottom: 0;
+		bottom: 24px;
+		left: 5.32em;
 	}
 
 	.main-navigation ul li.menu-item-has-children:after,
@@ -3552,8 +3553,8 @@ object {
 	}
 
 	.main-navigation ul ul a {
-		padding: 0.75em 1.25em;
-		width: 16em;
+		padding: 0.75em 0.5em;
+		width: 11em;
 	}
 
 	.main-navigation li li {
@@ -3585,7 +3586,7 @@ object {
 
 	.main-navigation ul li:hover > ul,
 	.main-navigation ul li.focus > ul {
-		left: 0.5em;
+		left: -0.7em;
 		right: auto;
 	}
 

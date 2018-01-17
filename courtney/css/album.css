@@ -1,49 +1,52 @@
 .photo_album_wrap {
-	height: 810px;
-	margin: 10px 0;
+	position: absolute;
+	width: 100%;
+	height: 110px;
+    top: calc(50% - (110px / 2));
 }
-@media (max-width: 1450px) {
-	.photo_album_wrap {
-		height: 710px;
-		margin: 60px 0;
-	}
-}
-@media (max-width: 1260px) {
-	.photo_album_wrap {
-		height: 610px;
-		margin: 110px 0;
-	}
-}
-@media (max-width: 1100px) {
-	.photo_album_wrap {
-		height: 510px;
-		margin: 160px 0;
-	}
-}
-@media (max-width: 940px) {
-	.photo_album_wrap {
-		height: 410px;
-		margin: 210px 0;
-	}
-}
-@media (max-width: 770px) {
-	.photo_album_wrap {
-		height: 310px;
-		margin: 260px 0;
-	}
-}
-@media (max-width: 590px) {
+@media (min-width: 416px) and (min-height: 297px) {
 	.photo_album_wrap {
 		height: 210px;
-		margin: 310px 0;
+	    top: calc(50% - (210px / 2));
 	}
 }
-@media (max-width: 415px) {
+@media (min-width: 591px) and (min-height: 397px) {
 	.photo_album_wrap {
-		height: 110px;
-		margin: 360px 0;
+		height: 310px;
+		top: calc(50% - (310px / 2));
 	}
 }
+@media (min-width: 771px) and (min-height: 497px) {
+	.photo_album_wrap {
+		height: 410px;
+		top: calc(50% - (410px / 2));
+	}
+}
+@media (min-width: 941px) and (min-height: 597px) {
+	.photo_album_wrap {
+		height: 510px;
+		top: calc(50% - (510px / 2));
+	}
+}
+@media (min-width: 1101px) and (min-height: 697px) {
+	.photo_album_wrap {
+		height: 610px;
+		top: calc(50% - (610px / 2));
+	}
+}
+@media (min-width: 1261px) and (min-height: 797px){
+	.photo_album_wrap {
+		height: 710px;
+		top: calc(50% - (710px / 2));
+	}
+}
+@media (min-width: 1451px) {
+	.photo_album_wrap {
+		height: 810px;
+		top: calc(50% - (810px / 2));
+	}
+}
+
 .photo_album_wrap_div {
 	float: left;
 	height: 100%;
@@ -85,6 +88,7 @@
 	margin: 0;
 	position: absolute;
 	height: 100%;
+	cursor: pointer;
 }
 .photo-slider .photos_list .photo_item {
 	overflow: hidden;
@@ -122,4 +126,30 @@
 
 .photo_gallery_item_selected {
 	border: solid 1px grey;
+}
+
+#picture-overlay {
+	display: none;
+	position: fixed;
+    background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+    cursor: pointer;
+}
+
+.picture-overlay__image {
+	position: absolute;
+	width: 90%;
+	height: 90%;
+	top: 50%;
+    left: 50%;
+    font-size: 50px;
+/*    background: white;*/
+    transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
 }
