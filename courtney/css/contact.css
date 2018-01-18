@@ -1,5 +1,7 @@
-.contact-page.wrap {
-	border: 1px solid #bbbbbb;
+.contact-page-header {
+	margin-top: 20px;
+    font-size: 3em;
+    border-bottom: solid 1px #bbbbbb;
 }
 
 .contact-page-wrap {

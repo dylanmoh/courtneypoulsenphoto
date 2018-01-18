@@ -17,7 +17,7 @@ if (is_front_page() ) {
 <div class="site-branding">
 		<div class="header-wrap<?php echo $extra_class ?>">
 			<a class="social-media-icon" target="_blank" title="follow me on instagram" href="https://www.instagram.com/courtneypoulsenphoto/"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-			<a target="_blank" class="social-media-icon" href="#">
+			<a class="social-media-icon" href="<?php echo get_site_url() . '/contact'; ?>">
 			<i class="fa fa-envelope" aria-hidden="true"></i>
 			</a>
 			<?php the_custom_logo(); ?>

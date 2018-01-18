@@ -6,6 +6,7 @@ get_header();
 <div class="contact-page wrap">
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
+			<h1 class="contact-page-header">Contact</h1>
 			<div class="contact-page-wrap">
 				<div class="contact-wrap">
 					<label class="name">

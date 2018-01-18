@@ -2277,10 +2277,6 @@ body:not(.twentyseventeen-front-page) .entry-header {
 	margin: 0 0 1.5em;
 }
 
-.page:not(.home) #content {
-	padding-bottom: 1.5em;
-}
-
 /* 404 page */
 
 .error404 .page-content {
@@ -3914,10 +3910,6 @@ object {
 	.twentyseventeen-front-page.page-one-column .entry-header,
 	.archive.page-one-column:not(.has-sidebar) .page-header {
 		margin-bottom: 4em;
-	}
-
-	.page:not(.home) #content {
-		padding-bottom: 3.25em;
 	}
 
 	/* 404 page */

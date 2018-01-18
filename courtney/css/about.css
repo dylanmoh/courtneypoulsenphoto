@@ -1,0 +1,20 @@
+.about-page-header {
+    font-size: 3em;
+    text-align: center;
+}
+
+.about-page-wrap {
+	padding: 80px 0;
+	background-size: cover;
+	min-height: 900px
+}
+
+.about-content {
+	margin: 0 5em;
+	background: rgba(255, 255,255, 0.8);
+	padding: 1em 4em;
+}
+
+.about-wrap {
+
+}
