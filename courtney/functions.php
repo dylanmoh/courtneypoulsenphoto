@@ -417,6 +417,7 @@ function twentyseventeen_scripts() {
 	wp_enqueue_style( 'header-css', get_theme_file_uri("/css/header.css"));
 	wp_enqueue_style( 'footer-css', get_theme_file_uri("/css/footer.css"));
 	wp_enqueue_style( 'home-css', get_theme_file_uri("/css/home.css"));
+	wp_enqueue_style( 'contact-css', get_theme_file_uri("/css/contact.css"));
 	wp_enqueue_style( 'album-css', get_theme_file_uri("/css/album.css"));
 	wp_enqueue_script('jQuery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js');
 	wp_enqueue_script('font-awesome-js', "https://use.fontawesome.com/94db5156dc.js");

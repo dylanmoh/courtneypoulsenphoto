@@ -1,0 +1,17 @@
+.contact-page-wrap {
+	margin-top: 80px;
+}
+
+.contact-wrap label {
+	display: block;
+}
+
+.contact-wrap {
+	width: 25%;
+	float: left;
+}
+
+.form-wrap {
+	width: 75%;
+	float: right;
+}
