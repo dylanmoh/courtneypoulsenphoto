@@ -1,5 +1,4 @@
-jQuery(document).ready(function () {
-
+jQuery(window).on("load", function () {
     var mySlider = new Slider(this);
     mySlider.initSlider();
 });
@@ -24,12 +23,6 @@ function Slider(slider) {
     var positionArr = new Array();
     var tempPrevPosition = 0;
     var tempCurrentPosition = $('.photo_album_wrap').width() / 2;
-    for (var i = 0; i < slider[0].childElementCount; i++) {
-            tempCurrentPosition -= tempPrevPosition;
-            tempPrevPosition = slider[0].children[i].clientWidth / 2;
-            tempCurrentPosition -= tempPrevPosition;
-            positionArr.push(tempCurrentPosition);
-    }
     var gallery = $('.photo_gallery div');
     var currentIndex = 2;
     var firstIndex = 2;
@@ -37,13 +30,12 @@ function Slider(slider) {
     var currentLeft = $('.photo_album_wrap').width() / 2;
 
     this.initSlider = function() {
+        this.recalculateVars();
         $(gallery[0]).addClass('photo_gallery_item_selected');
         $('.arrow_div').width(($('.photo_album_wrap').width() - (slider[0].children[currentIndex].scrollWidth)) / 2);
         slider.css({left: positionArr[currentIndex]});
         this.initSliderClickEvents();
         this.initSliderResizeEvents();
-        this.initHorizontalScroll();
-        this.initGalleryClickEvents();
     }
 
     this.initSliderClickEvents = function() {
@@ -83,26 +75,14 @@ function Slider(slider) {
     }
 
     this.initSliderResizeEvents = function() {
+        var doc = this;
         $(window).resize(function () {
-            positionArr = new Array();
-            tempPrevPosition = 0;
-            tempCurrentPosition = $('.photo_album_wrap').width() / 2;
-            for (var i = 0; i < slider[0].childElementCount; i++) {
-                    tempCurrentPosition -= tempPrevPosition;
-                    tempPrevPosition = slider[0].children[i].clientWidth / 2;
-                    tempCurrentPosition -= tempPrevPosition;
-                    positionArr.push(tempCurrentPosition);
-            }
-            $('.arrow_div').width(($('.photo_album_wrap').width() - (slider[0].children[currentIndex].scrollWidth)) / 2);
-            slider.animate({left: (positionArr[currentIndex])}, 0);
+            doc.recalculateVars();
         })
     }
 
     this.initHorizontalScroll = function() {
-        var lastScrollLeft
-        $('.photo_album_wrap').scroll(function() {
-
-        })
+    
     }
 
     this.initGalleryClickEvents = function() {
@@ -126,5 +106,19 @@ function Slider(slider) {
             }
             slider.animate({left: (-(sliderWidth * currentIndex))}, 300);
         })
+    }
+
+    this.recalculateVars = function() {
+        positionArr = new Array();
+        tempPrevPosition = 0;
+        tempCurrentPosition = $('.photo_album_wrap').width() / 2;
+        for (var i = 0; i < slider[0].childElementCount; i++) {
+                tempCurrentPosition -= tempPrevPosition;
+                tempPrevPosition = slider[0].children[i].clientWidth / 2;
+                tempCurrentPosition -= tempPrevPosition;
+                positionArr.push(tempCurrentPosition);
+        }
+        $('.arrow_div').width(($('.photo_album_wrap').width() - (slider[0].children[currentIndex].scrollWidth)) / 2);
+        slider.animate({left: (positionArr[currentIndex])}, 0);
     }
 }
