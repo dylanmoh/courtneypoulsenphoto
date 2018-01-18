@@ -3,7 +3,7 @@
 
 get_header(); 
 ?>
-<div class="wrap">
+<div class="contact-page wrap">
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 			<div class="contact-page-wrap">
