@@ -590,7 +590,7 @@ add_filter( 'wp_get_attachment_image_attributes', 'twentyseventeen_post_thumbnai
  * @return string The template to be used: blank if is_home() is true (defaults to index.php), else $template.
  */
 function twentyseventeen_front_page_template( $template ) {
-	return is_home() ? '' : $template;
+	return "";
 }
 add_filter( 'frontpage_template',  'twentyseventeen_front_page_template' );
 

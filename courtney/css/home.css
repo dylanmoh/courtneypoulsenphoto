@@ -1,4 +1,11 @@
+.home-image-wrap {
+	height: 100%;
+	width: 100%;
+	position: fixed;
+}
+
 .home-image {
+	position: absolute;
 	width: 100%;
 }
 

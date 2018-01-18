@@ -6,9 +6,11 @@ get_header(); ?>
 $image = get_field('home_background_image');
 ?>
 <div id="logo_overlay" class="hidden"> 
-<?php the_custom_logo(); ?>
+	<?php the_custom_logo(); ?>
 </div>
-<img class="home-image" src="<?php echo $image; ?>" />
 
+<div class="home-image-wrap">
+	<img class="home-image" src="<?php echo $image; ?>" />
+</div>
  <?php 
  get_footer();

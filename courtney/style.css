@@ -3518,7 +3518,7 @@ object {
 		height: 0;
 		position: absolute;
 		right: 5em;
-		bottom: 23px;
+		bottom: 14px;
 		width: 0;
 		z-index: 100000;
 	}
@@ -3537,7 +3537,7 @@ object {
 	.main-navigation ul li.menu-item-has-children:before,
 	.main-navigation ul li.page_item_has_children:before {
 		border-color: transparent transparent #bbb;
-		bottom: 24px;
+		bottom: 15px;
 		left: 5.32em;
 	}
 
