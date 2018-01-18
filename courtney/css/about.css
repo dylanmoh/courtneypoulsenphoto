@@ -15,6 +15,13 @@
 	padding: 1em 4em;
 }
 
-.about-wrap {
+.about-left-wrap {
+	width: 25%;
+	float: left;
+}
 
+.about-right-wrap {
+	width: 75%;
+	margin-left: 25%;
+	padding-left: 10px;
 }
