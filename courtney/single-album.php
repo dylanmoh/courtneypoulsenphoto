@@ -17,7 +17,15 @@ $images = get_field('photo_album');
 	<div class="picture-overlay__image">
 	</div>
 </div>
-<div class="content_centered">
+<div class="photo_album_tool_bar">
+		<div class="photo_album_tool-wrap">
+			<i class="fa fa-exchange" aria-hidden="true"></i>
+		</div>
+		<div class="photo_album_tool-wrap">
+			<i class="fa fa-columns" aria-hidden="true"></i>
+		</div>
+</div>
+<div class="photo_album_content_centered content_centered">
 	<div class="photo_album_wrap">
 		<div class="photo_album_wrap_div arrow_div arrow_left">
 			<div class="left-arrow">
@@ -49,15 +57,31 @@ $images = get_field('photo_album');
 		</div>
 	</div>
 </div>
-
-<!-- <div class="photo_gallery">
-		<?php if ($images) { ?>
-				<?php foreach( $images as $image ) { ?>
-		            <div class="photo_gallery_item">
-		                <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
-		            </div>
-        		<?php } ?>
-		<?php } ?>
-</div> -->
+<div class="photo_gallery-wrap">
+	<div class="photo_gallery">
+			<?php 
+			$i = 0;
+			if ($images) { ?>
+				<?php foreach( $images as $image ) { 
+					if ($i == 0 ) { ?>
+						<div class="column">
+					<?php } ?>
+			            <div class="photo_gallery_item">
+			                <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+			            </div>
+	        		<?php 
+	        		$i++;
+	        		if ($i == (ceil((sizeof($images))) / 2)) { ?>
+	        			</div>
+						<div class="column">
+	        		<?php }
+	        		if ($i == (sizeof($images))) { ?>
+	        			</div>
+	        		<?php }
+	        	} ?>
+			<?php 
+			} ?>
+	</div>
+</div>
 
 <?php get_footer();

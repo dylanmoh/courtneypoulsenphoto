@@ -16,7 +16,7 @@
 @media (max-width: 520px) {
 	.site-branding .custom-logo-link {
 		top: calc(50% - (45.28px / 2));
-		margin-left: calc(50% - (43.86px + 35.72px) - (264.95px / 2));
+		margin-left: calc(50% - (43.86px + 35.72px) - (149.92px / 2));
 	}
 
 	.site-branding .custom-logo {
