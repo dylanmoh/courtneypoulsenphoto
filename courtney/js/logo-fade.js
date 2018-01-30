@@ -9,8 +9,8 @@ function TheImage(theImage) {
     var fullHeight = $(window)[0].innerHeight;
     var image = $('.home-image');
     var imageHeight = image[0].clientHeight;
-    var moveTime= 15000;
-    var pauseTime = 3000;
+    var moveTime= 20000;
+    var pauseTime = 1500;
     var timer;
     myImage.myInterval;
 
