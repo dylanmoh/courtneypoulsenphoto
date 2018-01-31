@@ -12,6 +12,18 @@
 
 get_header(); 
 $images = get_field('photo_album');
+$i = 1;
+$leftImages = array();
+$rightImages = array();
+foreach ($images as $image) {
+	if (($i % 2) == 1) {
+		array_push($leftImages, $image);
+	}
+	else {
+		array_push($rightImages, $image);
+	}
+	$i++;
+}
 ?>
 <div id="picture-overlay">
 	<div class="picture-overlay__image">
@@ -60,27 +72,22 @@ $images = get_field('photo_album');
 <div class="photo_gallery-wrap">
 	<div class="photo_gallery">
 			<?php 
-			$i = 0;
 			if ($images) { ?>
-				<?php foreach( $images as $image ) { 
-					if ($i == 0 ) { ?>
-						<div class="column">
-					<?php } ?>
-			            <div class="photo_gallery_item">
-			                <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
-			            </div>
-	        		<?php 
-	        		$i++;
-	        		if ($i == (ceil((sizeof($images))) / 2)) { ?>
-	        			</div>
-						<div class="column">
-	        		<?php }
-	        		if ($i == (sizeof($images))) { ?>
-	        			</div>
-	        		<?php }
-	        	} ?>
-			<?php 
-			} ?>
+				<div class="column">
+				<?php foreach( $leftImages as $image ) { ?>
+			        <div class="photo_gallery_item">
+			            <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+			        </div>
+	        	<?php } ?>
+	        	</div>
+	        	<div class="column">
+	        	<?php foreach( $rightImages as $image ) { ?>
+			        <div class="photo_gallery_item">
+			            <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+			        </div>
+	        	<?php } ?>
+        		</div>
+			<?php } ?>
 	</div>
 </div>
 

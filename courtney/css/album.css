@@ -75,7 +75,7 @@
 @media (min-width: 941px) and (min-height: 597px) {
 	.photo_album_wrap {
 		height: 510px;
-		top: calc(50% - (510px / 2));
+		top: calc(50% - (510px / 2) + 20px);
 	}
 }
 @media (min-width: 1101px) and (min-height: 697px) {

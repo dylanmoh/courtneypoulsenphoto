@@ -9,8 +9,8 @@ function Slider(slider) {
 
     $('.content_centered').height(($(document).height()) - ($('.site-header').height()));
     var tool_slide = $('.photo_album_tool_bar')[0].children[0];
-    $(tool_slide).addClass('active');
     var tool_grid = $('.photo_album_tool_bar')[0].children[1];
+    $(tool_slide).addClass('active');
 
     var sliderWrap = $('.photo_album_content_centered');
     var slider = $('.photos_list');
@@ -82,9 +82,9 @@ function Slider(slider) {
             document.getElementById("picture-overlay").style.display = "none";
         })
         $(rightArrow).click(function() {
-            $(gallery[currentIndex]).removeClass('photo_gallery_item_selected');
+            //$(gallery[currentIndex]).removeClass('photo_gallery_item_selected');
             currentIndex++;
-            $(gallery[currentIndex]).addClass('photo_gallery_item_selected');
+            //$(gallery[currentIndex]).addClass('photo_gallery_item_selected');
             $('.arrow_div').animate({width: (($('.photo_album_wrap').width() - (slider[0].children[currentIndex].scrollWidth)) / 2)}, 600);
             slider.animate({left: positionArr[currentIndex]}, 600);
             if (currentIndex == lastIndex + 1) {
@@ -93,9 +93,9 @@ function Slider(slider) {
             }
         })
         $(leftArrow).click(function() {
-            $(gallery[currentIndex]).removeClass('photo_gallery_item_selected');
+            //$(gallery[currentIndex]).removeClass('photo_gallery_item_selected');
             currentIndex--;
-            $(gallery[currentIndex]).addClass('photo_gallery_item_selected');
+            //$(gallery[currentIndex]).addClass('photo_gallery_item_selected');
             $('.arrow_div').animate({width: (($('.photo_album_wrap').width() - (slider[0].children[currentIndex].scrollWidth)) / 2)}, 600);
             slider.animate({left: positionArr[currentIndex]}, 600);
             if (currentIndex == firstIndex - 1) {

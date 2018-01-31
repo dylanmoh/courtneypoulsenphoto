@@ -490,7 +490,7 @@ h6 {
 }
 
 p {
-	margin: 0 0 1.5em;
+	margin: 0 0 1em;
 	padding: 0;
 }
 
@@ -3308,7 +3308,7 @@ object {
 	textarea {
 		font-size: 16px;
 		font-size: 1rem;
-		line-height: 1.5;
+		line-height: 1;
 	}
 
 	.entry-content blockquote.alignleft,
