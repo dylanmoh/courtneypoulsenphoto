@@ -3,14 +3,16 @@ get_header(); ?>
 
 <?php
 // get an image field
-$image = get_field('home_background_image');
+$images = get_field('home_background_image');
 ?>
 <div id="logo_overlay" class="hidden"> 
 	<?php the_custom_logo(); ?>
 </div>
 
 <div class="home-image-wrap">
-	<img class="home-image" src="<?php echo $image; ?>" />
+	<?php foreach ($images as $image) {
+			echo '<img class="home-image" src="' . $image['url'] . '" />';
+	} ?>
 </div>
  <?php 
  get_footer();
