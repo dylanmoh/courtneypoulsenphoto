@@ -5,18 +5,29 @@ jQuery(window).on("load", function () {
 
 function Slider(slider) {
     var galleryWrap = $('.photo_gallery-wrap');
-    $(galleryWrap).hide();
 
     //$('.content_centered').height(($(document).height()) - ($('.site-header').height()));
     var tool_slide = $('.photo_album_tool_bar')[0].children[0];
     var tool_grid = $('.photo_album_tool_bar')[0].children[1];
-    $(tool_slide).addClass('active');
 
     var sliderWrap = $('.photo_album_content_centered');
     var slider = $('.photos_list');
     var sliderWidth = $('.photo-slider').width();
     var leftArrow = $('.arrow_left');
     var rightArrow = $('.arrow_right');
+
+    if ($(window)[0].innerWidth >= 770) {
+        sliderWrap.show();
+        galleryWrap.hide();
+        $(tool_slide).addClass('active');
+    } 
+    else {
+        galleryWrap.show();
+        sliderWrap.hide();
+        $(tool_grid).addClass('active');
+    }
+    sliderWrap.removeClass('loading-width');
+    galleryWrap.removeClass('loading-width');
 
     var first = $(slider[0].children[0]);
     var second = $(slider[0].children[1]);

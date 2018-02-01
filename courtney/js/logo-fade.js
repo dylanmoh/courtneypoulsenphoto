@@ -23,7 +23,7 @@ function TheImage(theImage) {
     var fullHeight = $(window)[0].innerHeight;
     var fullWidth = $(window)[0].innerWidth;
     var image = $(imageWrap[currentImage]);
-    var moveTime= 10000;
+    var moveTime= 15000;
     var pauseTime = 1500;
     var timer;
     myImage.myInterval;
@@ -33,18 +33,22 @@ function TheImage(theImage) {
         $(imageWrap).hide();
         image.show();
     	myImage.moveFirst();
-    	myImage.myInterval = setInterval(myImage.move, ((moveTime + pauseTime)));
+    	myImage.myInterval = setInterval(myImage.move, ((moveTime)));
     }
 
     this.moveFirst = function() {
         image.animate({top: 0}, 0);
         image.animate({left: 0}, 0);
         if (imageHeights[currentImage] > fullHeight) {
-            image.removeClass('home-image-expand-width');
-            image.delay(pauseTime).animate({top: -(imageHeights[currentImage] - fullHeight)}, moveTime);
+            if (image.hasClass('home-image-expand-width')) {
+                image.removeClass('home-image-expand-width');
+            }
+            image.animate({top: -(imageHeights[currentImage] - fullHeight)}, moveTime);
         }
         else {
-            image.addClass('home-image-expand-width');
+            if (!(image.hasClass('home-image-expand-width'))) {
+                image.addClass('home-image-expand-width');
+            }
             image.animate({left: ((fullWidth / 2) - (imageWidths[currentImage] / 2))}, 0);
         }
     }
@@ -60,11 +64,15 @@ function TheImage(theImage) {
         image.animate({left: 0}, 0);
         image.fadeIn(pauseTime);
         if (imageHeights[currentImage] > fullHeight) {
-            image.removeClass('home-image-expand-width');
-        	image.delay(pauseTime).animate({top: -(imageHeights[currentImage] - fullHeight)}, moveTime);
+            if (image.hasClass('home-image-expand-width')) {
+                image.removeClass('home-image-expand-width');
+            }
+            image.animate({top: -(imageHeights[currentImage] - fullHeight)}, moveTime);
         }
         else {
-            image.addClass('home-image-expand-width');
+           if (!(image.hasClass('home-image-expand-width'))) {
+                image.addClass('home-image-expand-width');
+            }
             image.animate({left: ((fullWidth / 2) - (imageWidths[currentImage] / 2))}, 0);
         }
     }
@@ -82,7 +90,7 @@ function TheImage(theImage) {
     this.finishResize = function() {
     	myImage.recalculateVars();
     	myImage.moveFirst();
-    	myImage.myInterval = setInterval(myImage.move, ((moveTime + pauseTime)));
+    	myImage.myInterval = setInterval(myImage.move, ((moveTime)));
     }
 
     this.recalculateVars = function() {

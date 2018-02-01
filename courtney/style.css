@@ -3527,8 +3527,8 @@ object {
 	.main-navigation ul li.page_item_has_children:hover:before,
 	.main-navigation ul li.page_item_has_children.focus:after,
 	.main-navigation ul li.page_item_has_children:hover:after {
-		display: block;
-	}
+/*		display: block;
+*/	}
 
 	.main-navigation ul li.menu-item-has-children:before,
 	.main-navigation ul li.page_item_has_children:before {
@@ -3550,7 +3550,7 @@ object {
 
 	.main-navigation ul ul a {
 		padding: 0.75em 0.5em;
-		width: 11em;
+		width: 6em;
 	}
 
 	.main-navigation li li {
@@ -3560,8 +3560,8 @@ object {
 
 	.main-navigation li li:hover,
 	.main-navigation li li.focus {
-		background: #767676;
-	}
+/*		background: #767676;
+*/	}
 
 	.main-navigation li li a {
 		-webkit-transition: color 0.3s ease-in-out;
@@ -3577,12 +3577,12 @@ object {
 	.main-navigation li li.current-menu-item a:hover,
 	.main-navigation li li.current_page_item a:focus,
 	.main-navigation li li.current-menu-item a:focus {
-		color: #fff;
+		color: #C0C0C0;
 	}
 
 	.main-navigation ul li:hover > ul,
 	.main-navigation ul li.focus > ul {
-		left: -4.7em;
+		left: 1.3em;
 		right: auto;
 	}
 

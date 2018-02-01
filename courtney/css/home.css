@@ -7,10 +7,12 @@
 .home-image {
 	position: absolute;
 	min-height: 100%;
+	width: 100%;
 }
 
 .home-image-expand-width {
 	max-width: unset;
+	width: unset;
 	height: 100%;
 }
 

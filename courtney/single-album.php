@@ -27,7 +27,7 @@ foreach ($images as $image) {
 			<i class="fa fa-columns" aria-hidden="true"></i>
 		</div>
 </div>
-<div class="photo_album_content_centered content_centered">
+<div class="photo_album_content_centered loading-width content_centered">
 	<div class="photo_album_wrap">
 		<div class="photo_album_wrap_div arrow_div arrow_left">
 			<div class="left-arrow">
@@ -59,7 +59,7 @@ foreach ($images as $image) {
 		</div>
 	</div>
 </div>
-<div class="photo_gallery-wrap" style="display: none;">
+<div class="photo_gallery-wrap loading-width">
 	<div class="photo_gallery">
 			<?php 
 			if ($images) { ?>
