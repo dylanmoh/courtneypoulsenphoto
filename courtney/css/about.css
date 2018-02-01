@@ -10,10 +10,17 @@
 }
 
 .about-content {
-	margin: 0 5em;
+	margin: 0;
 	background: rgba(255, 255,255, 0.8);
-	padding: 1em 4em;
+	padding: 1em;
 	min-height: calc(820px - (2 * 1em));
+}
+
+@media (min-width: 770px) {
+	.about-content {
+		margin: 0 5em;
+		padding: 1em 4em;
+	}
 }
 
 .about-left-wrap {

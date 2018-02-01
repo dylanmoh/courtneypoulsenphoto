@@ -14,9 +14,33 @@
 }
 
 .contact-page-wrap {
-	margin: 0 10em;
+	margin: 0;
 	background: rgba(255, 255,255, 0.8);
-	padding: 1em 4em;
+	padding: 1em;
+}
+
+@media (min-width: 800px) {
+	.contact-page-wrap {
+		margin: 0 5em;
+		padding: 1em 2em;
+	}
+}
+
+@media (min-width: 1045px) {
+	.contact-page-wrap {
+		margin: 0 10em;
+		padding: 1em 4em;
+	}
+}
+
+.contact-page-wrap label {
+	font-size: 12px;
+}
+
+@media (min-width: 600px) {
+	.contact-page-wrap label {
+		font-size: 15px;
+	}
 }
 
 .contact-wrap label {
@@ -24,11 +48,23 @@
 }
 
 .contact-wrap {
-	width: 25%;
-	float: left;
+	width: 100%;
 }
 
 .form-wrap {
-	width: 70%;
-	margin-left: 30%;
+	width: 100%;
 }
+
+@media (min-width: 520px) {
+	.contact-wrap {
+		width: 25%;
+		float: left;
+	}
+
+	.form-wrap {
+		width: 70%;
+		margin-left: 30%;
+	}
+}
+
+

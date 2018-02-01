@@ -1,3 +1,24 @@
 footer {
+	background: grey;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+.site-footer .wrap {
+	margin: 0;
+	padding: 0;
+}
+
+.site-footer .widget-area {
+	padding: 0;
+}
+
+footer #custom_html-3 {
+	padding: 0;
+}
+
+footer .widget-title {
 	display: none;
 }
