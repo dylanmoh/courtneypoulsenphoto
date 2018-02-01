@@ -13,6 +13,7 @@
 	margin: 0 5em;
 	background: rgba(255, 255,255, 0.8);
 	padding: 1em 4em;
+	min-height: calc(820px - (2 * 1em));
 }
 
 .about-left-wrap {

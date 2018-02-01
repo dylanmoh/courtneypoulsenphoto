@@ -7,7 +7,7 @@ function Slider(slider) {
     var galleryWrap = $('.photo_gallery-wrap');
     $(galleryWrap).hide();
 
-    $('.content_centered').height(($(document).height()) - ($('.site-header').height()));
+    //$('.content_centered').height(($(document).height()) - ($('.site-header').height()));
     var tool_slide = $('.photo_album_tool_bar')[0].children[0];
     var tool_grid = $('.photo_album_tool_bar')[0].children[1];
     $(tool_slide).addClass('active');

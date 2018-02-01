@@ -48,6 +48,9 @@
 
 
 /*Album Slider*/
+.photo_album_content_centered {
+	height: 140px;	
+}
 .photo_album_wrap {
 	position: absolute;
 	width: 100%;
@@ -59,11 +62,17 @@
 		height: 210px;
 	    top: calc(50% - (210px / 2));
 	}
+	.photo_album_content_centered {
+		height: 240px;	
+	}
 }
 @media (min-width: 591px) and (min-height: 397px) {
 	.photo_album_wrap {
 		height: 310px;
 		top: calc(50% - (310px / 2));
+	}
+	.photo_album_content_centered {
+		height: 340px;	
 	}
 }
 @media (min-width: 771px) and (min-height: 497px) {
@@ -71,11 +80,17 @@
 		height: 410px;
 		top: calc(50% - (410px / 2));
 	}
+	.photo_album_content_centered {
+		height: 440px;	
+	}
 }
 @media (min-width: 941px) and (min-height: 597px) {
 	.photo_album_wrap {
 		height: 510px;
 		top: calc(50% - (510px / 2) + 20px);
+	}
+	.photo_album_content_centered {
+		height: 540px;	
 	}
 }
 @media (min-width: 1101px) and (min-height: 697px) {
@@ -83,17 +98,26 @@
 		height: 610px;
 		top: calc(50% - (610px / 2));
 	}
+	.photo_album_content_centered {
+		height: 640px;	
+	}
 }
 @media (min-width: 1261px) and (min-height: 797px){
 	.photo_album_wrap {
 		height: 710px;
 		top: calc(50% - (710px / 2));
 	}
+	.photo_album_content_centered {
+		height: 740px;	
+	}
 }
 @media (min-width: 1451px) {
 	.photo_album_wrap {
 		height: 810px;
 		top: calc(50% - (810px / 2));
+	}
+	.photo_album_content_centered {
+		height: 840px;	
 	}
 }
 
