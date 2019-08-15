@@ -1,6 +1,6 @@
 <?php
 
-get_header(); 
+get_header();
 $images = get_field('photo_album');
 $i = 1;
 $leftImages = array();
@@ -37,8 +37,8 @@ foreach ($images as $image) {
 		<div class="photo_album_wrap_div photo-slider">
 			<?php if ($images) { ?>
 				<div class="photos_list">
-					<?php foreach( $images as $image ) { 
-						if ($image[width] > $image[height]) {
+					<?php foreach( $images as $image ) {
+						if ($image['width'] > $image['height']) {
 							$extraClass = "landscape";
 						}
 						else {
@@ -61,7 +61,7 @@ foreach ($images as $image) {
 </div>
 <div class="photo_gallery-wrap loading-width">
 	<div class="photo_gallery">
-			<?php 
+			<?php
 			if ($images) { ?>
 				<div class="column">
 				<?php foreach( $leftImages as $image ) { ?>
