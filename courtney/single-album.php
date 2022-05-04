@@ -46,7 +46,7 @@ foreach ($images as $image) {
 						}
 						?>
 			            <div class="photo_item <?php echo $extraClass; ?>">
-			                <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+			                <img src="<?php echo $image['full_image_url']; ?>" alt="<?php echo $image['title']; ?>" />
 			            </div>
 	        		<?php } ?>
 				</div>
@@ -66,14 +66,14 @@ foreach ($images as $image) {
 				<div class="column">
 				<?php foreach( $leftImages as $image ) { ?>
 			        <div class="photo_gallery_item">
-			            <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+			            <img src="<?php echo $image['full_image_url']; ?>" alt="<?php echo $image['title']; ?>" />
 			        </div>
 	        	<?php } ?>
 	        	</div>
 	        	<div class="column">
 	        	<?php foreach( $rightImages as $image ) { ?>
 			        <div class="photo_gallery_item">
-			            <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+			            <img src="<?php echo $image['full_image_url']; ?>" alt="<?php echo $image['title']; ?>" />
 			        </div>
 	        	<?php } ?>
         		</div>

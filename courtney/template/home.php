@@ -11,7 +11,7 @@ $images = get_field('home_background_image');
 
 <div class="home-image-wrap">
 	<?php foreach ($images as $image) {
-			echo '<img class="home-image" src="' . $image['url'] . '" />';
+			echo '<img class="home-image" src="' . $image['full_image_url'] . '" />';
 	} ?>
 </div>
  <?php 
