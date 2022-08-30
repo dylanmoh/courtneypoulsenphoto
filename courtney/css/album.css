@@ -23,7 +23,7 @@
 	.photo_gallery-wrap {
 		margin: auto;
 		margin-top: 40px;
-		width: 50%;
+		width: calc(100% - 10px);
 	}
 }
 
@@ -199,7 +199,30 @@
 
 .photo_gallery .column {
 	flex: 50%;
-	max-width: 50%;
+	max-width: 33%;
+}
+
+.column-desktop {
+	display: none;
+}
+
+.column-mobile {
+	display: block;
+}
+
+@media (min-width: 800px) {
+	.photo_gallery .column {
+		flex: 50%;
+		max-width: 25%;
+	}
+
+	.column-desktop {
+		display: block;
+	}
+	
+	.column-mobile {
+		display: none;
+	}
 }
 
 .photo_gallery_item {

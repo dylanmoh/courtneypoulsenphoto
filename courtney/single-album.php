@@ -2,17 +2,33 @@
 
 get_header();
 $images = get_field('photo_album');
-$i = 1;
-$leftImages = array();
-$rightImages = array();
-foreach ($images as $image) {
-	if (($i % 2) == 1) {
-		array_push($leftImages, $image);
-	}
-	else {
-		array_push($rightImages, $image);
-	}
-	$i++;
+$desktopColumnOne = array();
+$desktopColumnTwo = array();
+$desktopColumnThree = array();
+$desktopColumnFour = array();
+$mobileColumnOne = array();
+$mobileColumnTwo = array();
+$mobileColumnThree = array();
+for ($i = 0; $i < sizeof($images); $i+=4) {
+	array_push($desktopColumnOne, $images[$i]);
+}
+for ($i = 1; $i < sizeof($images); $i+=4) {
+	array_push($desktopColumnTwo, $images[$i]);
+}
+for ($i = 2; $i < sizeof($images); $i+=4) {
+	array_push($desktopColumnThree, $images[$i]);
+}
+for ($i = 3; $i < sizeof($images); $i+=4) {
+	array_push($desktopColumnFour, $images[$i]);
+}
+for ($i = 0; $i < sizeof($images); $i+=3) {
+	array_push($mobileColumnOne, $images[$i]);
+}
+for ($i = 1; $i < sizeof($images); $i+=3) {
+	array_push($mobileColumnTwo, $images[$i]);
+}
+for ($i = 2; $i < sizeof($images); $i+=3) {
+	array_push($mobileColumnThree, $images[$i]);
 }
 ?>
 <div id="picture-overlay">
@@ -63,15 +79,50 @@ foreach ($images as $image) {
 	<div class="photo_gallery">
 			<?php
 			if ($images) { ?>
-				<div class="column">
-				<?php foreach( $leftImages as $image ) { ?>
+				<div class="column column-desktop">
+				<?php foreach( $desktopColumnOne as $i => $image ) { ?>
 			        <div class="photo_gallery_item">
 			            <img src="<?php echo $image['full_image_url']; ?>" alt="<?php echo $image['title']; ?>" />
 			        </div>
 	        	<?php } ?>
 	        	</div>
-	        	<div class="column">
-	        	<?php foreach( $rightImages as $image ) { ?>
+	        	<div class="column column-desktop">
+	        	<?php foreach( $desktopColumnTwo as $image ) { ?>
+			        <div class="photo_gallery_item">
+			            <img src="<?php echo $image['full_image_url']; ?>" alt="<?php echo $image['title']; ?>" />
+			        </div>
+	        	<?php } ?>
+        		</div>
+				<div class="column column-desktop">
+	        	<?php foreach( $desktopColumnThree as $image ) { ?>
+			        <div class="photo_gallery_item">
+			            <img src="<?php echo $image['full_image_url']; ?>" alt="<?php echo $image['title']; ?>" />
+			        </div>
+	        	<?php } ?>
+        		</div>
+				<div class="column column-desktop">
+	        	<?php foreach( $desktopColumnFour as $image ) { ?>
+			        <div class="photo_gallery_item">
+			            <img src="<?php echo $image['full_image_url']; ?>" alt="<?php echo $image['title']; ?>" />
+			        </div>
+	        	<?php } ?>
+        		</div>
+				<div class="column column-mobile">
+				<?php foreach( $mobileColumnOne as $i => $image ) { ?>
+			        <div class="photo_gallery_item">
+			            <img src="<?php echo $image['full_image_url']; ?>" alt="<?php echo $image['title']; ?>" />
+			        </div>
+	        	<?php } ?>
+	        	</div>
+	        	<div class="column column-mobile">
+	        	<?php foreach( $mobileColumnTwo as $image ) { ?>
+			        <div class="photo_gallery_item">
+			            <img src="<?php echo $image['full_image_url']; ?>" alt="<?php echo $image['title']; ?>" />
+			        </div>
+	        	<?php } ?>
+        		</div>
+				<div class="column column-mobile">
+	        	<?php foreach( $mobileColumnThree as $image ) { ?>
 			        <div class="photo_gallery_item">
 			            <img src="<?php echo $image['full_image_url']; ?>" alt="<?php echo $image['title']; ?>" />
 			        </div>
