@@ -420,6 +420,7 @@ function twentyseventeen_scripts() {
 	wp_enqueue_style( 'about-css', get_theme_file_uri("/css/about.css"));
 	wp_enqueue_style( 'contact-css', get_theme_file_uri("/css/contact.css"));
 	wp_enqueue_style( 'album-css', get_theme_file_uri("/css/album.css"));
+	wp_enqueue_style( 'album-collection-css', get_theme_file_uri("/css/album-collection.css"));
 	wp_enqueue_script('jQuery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js');
 	wp_enqueue_script('font-awesome-js', "https://use.fontawesome.com/94db5156dc.js");
 	
@@ -513,6 +514,50 @@ function register_cpt_album() {
 
 	register_post_type( 'album', $args );
 }
+
+add_action( 'init', 'register_cpt_album_collection' );
+
+function register_cpt_album_collection() {
+
+	$labels = array(
+		'name' => __( 'Photo Album Collections', 'album-collection' ),
+		'singular_name' => __( 'Photo Album Collection', 'album-collection' ),
+		'add_new' => __( 'Add New', 'album-collection' ),
+		'add_new_item' => __( 'Add New Photo Album Collection', 'album-collection' ),
+		'edit_item' => __( 'Edit Photo Album Collection', 'album-collection' ),
+		'new_item' => __( 'New Photo Album Collection', 'album-collection' ),
+		'view_item' => __( 'View Photo Album Collection', 'album-collection' ),
+		'search_items' => __( 'Search Photo Album Collection', 'album-collection' ),
+		'not_found' => __( 'No photo album collections found', 'album-collection' ),
+		'not_found_in_trash' => __( 'No photo album collections found in Trash', 'album-collection' ),
+		'parent_item_colon' => __( 'Parent Photo Album Collection:', 'album-collection' ),
+		'menu_name' => __( 'Photo Album Collection', 'album-collection' ),
+	);
+
+	$args = array(
+		'labels' => $labels,
+		'hierarchical' => false,
+		'supports' => array(  ),
+		'public' => false,
+		'show_ui' => true,
+		'show_in_menu' => true,
+		'menu_position' => 10,
+		'menu_icon' => 'dashicons-format-gallery',
+		'show_in_nav_menus' => true,
+		'publicly_queryable' => true,
+		'exclude_from_search' => true,
+		'has_archive' => false,
+		'query_var' => true,
+		'can_export' => true,
+		'rewrite' => true,
+		'capability_type' => 'post'
+	);
+
+	register_post_type( 'album-collection', $args );
+}
+
+// Force reloads page
+// flush_rewrite_rules( false );
 
 /**
  * Add custom image sizes attribute to enhance responsive image functionality

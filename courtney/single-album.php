@@ -24,7 +24,7 @@ foreach ($images as $image) {
 			<i class="fa fa-exchange" aria-hidden="true"></i>
 		</div>
 		<div class="photo_album_tool-wrap">
-			<i class="fa fa-columns" aria-hidden="true"></i>
+			<i class="fa fa-th" aria-hidden="true"></i>
 		</div>
 </div>
 <div class="photo_album_content_centered loading-width content_centered">

@@ -1,0 +1,46 @@
+.collection-page-title {
+	font-size: 48px;
+	margin: 50px;
+	text-align: center;
+}
+
+.collection-tiles {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+.collection-tile {
+	margin: 5px;
+	width: calc(50% - 10px);
+}
+
+.collection-image {
+	display: block;
+}
+
+.collection-tile:hover .collection-image {
+	opacity: 30%;
+}
+
+.collection-title {
+    display: block;
+	font-weight: 600;
+	margin: 5px;
+}
+
+@media (min-width: 1200px) {
+	.collection-tiles {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+		margin: 0 80px;
+	}
+	
+	.collection-tile {
+		margin: 5px;
+		width: calc(33% - 10px);
+	}
+}
+
+
