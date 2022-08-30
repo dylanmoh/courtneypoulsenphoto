@@ -11,14 +11,13 @@ $formatted_collections = array_map(function($collection) {
 		'thumbnail' => get_field( "thumbnail", $id ),
     ];
 }, $collections);
-$test = array_merge($formatted_collections, $formatted_collections, $formatted_collections, $formatted_collections)
 ?>
 <div>
 	<div class="collection-page-title" >
 	&mdash;<?php echo get_the_title(); ?>&mdash;
 	</div>
 	<div class="collection-tiles">
-		<?php foreach( $test as $collection ) { ?>
+		<?php foreach( $formatted_collections as $collection ) { ?>
 			<div class="collection-tile" >
 				<a href="<?php echo $collection['link']; ?>" >
 					<img class="collection-image" src="<?php echo $collection['thumbnail']; ?>" />
