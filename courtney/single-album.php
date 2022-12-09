@@ -54,14 +54,8 @@ for ($i = 2; $i < sizeof($images); $i+=3) {
 			<?php if ($images) { ?>
 				<div class="photos_list">
 					<?php foreach( $images as $image ) {
-						if ($image['width'] > $image['height']) {
-							$extraClass = "landscape";
-						}
-						else {
-							$extraClass = "portrait";
-						}
 						?>
-			            <div class="photo_item <?php echo $extraClass; ?>">
+			            <div class="photo_item">
 			                <img src="<?php echo $image['full_image_url']; ?>" alt="<?php echo $image['title']; ?>" />
 			            </div>
 	        		<?php } ?>
