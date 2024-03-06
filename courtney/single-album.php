@@ -37,37 +37,11 @@ for ($i = 2; $i < sizeof($images); $i+=3) {
 </div>
 <div class="photo_album_tool_bar">
 		<div class="photo_album_tool-wrap">
-			<i class="fa fa-exchange" aria-hidden="true"></i>
-		</div>
-		<div class="photo_album_tool-wrap">
 			<i class="fa fa-th" aria-hidden="true"></i>
 		</div>
-</div>
-<div class="photo_album_content_centered loading-width content_centered">
-	<div class="photo_album_wrap">
-		<div class="photo_album_wrap_div arrow_div arrow_left">
-			<div class="left-arrow">
-				<i class="fa fa-chevron-left" aria-hidden="true"></i>
-			</div>
+		<div class="photo_album_tool-wrap">
+			<i class="fa fa-exchange" aria-hidden="true"></i>
 		</div>
-		<div class="photo_album_wrap_div photo-slider">
-			<?php if ($images) { ?>
-				<div class="photos_list">
-					<?php foreach( $images as $image ) {
-						?>
-			            <div class="photo_item">
-			                <img src="<?php echo $image['full_image_url']; ?>" alt="<?php echo $image['title']; ?>" />
-			            </div>
-	        		<?php } ?>
-				</div>
-			<?php } ?>
-		</div>
-		<div class="photo_album_wrap_div arrow_div arrow_right">
-			<div class="right-arrow">
-				<i class="fa fa-chevron-right" aria-hidden="true"></i>
-			</div>
-		</div>
-	</div>
 </div>
 <div class="photo_gallery-wrap loading-width">
 	<div class="photo_gallery">
@@ -123,6 +97,32 @@ for ($i = 2; $i < sizeof($images); $i+=3) {
 	        	<?php } ?>
         		</div>
 			<?php } ?>
+	</div>
+</div>
+<div class="photo_album_content_centered loading-width content_centered">
+	<div class="photo_album_wrap">
+		<div class="photo_album_wrap_div arrow_div arrow_left">
+			<div class="left-arrow">
+				<i class="fa fa-chevron-left" aria-hidden="true"></i>
+			</div>
+		</div>
+		<div class="photo_album_wrap_div photo-slider">
+			<?php if ($images) { ?>
+				<div class="photos_list">
+					<?php foreach( $images as $image ) {
+						?>
+			            <div class="photo_item">
+			                <img src="<?php echo $image['full_image_url']; ?>" alt="<?php echo $image['title']; ?>" />
+			            </div>
+	        		<?php } ?>
+				</div>
+			<?php } ?>
+		</div>
+		<div class="photo_album_wrap_div arrow_div arrow_right">
+			<div class="right-arrow">
+				<i class="fa fa-chevron-right" aria-hidden="true"></i>
+			</div>
+		</div>
 	</div>
 </div>
 

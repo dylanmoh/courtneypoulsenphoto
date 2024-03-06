@@ -7,8 +7,8 @@ function Slider(slider) {
     var galleryWrap = $('.photo_gallery-wrap');
 
     //$('.content_centered').height(($(document).height()) - ($('.site-header').height()));
-    var tool_slide = $('.photo_album_tool_bar')[0].children[0];
-    var tool_grid = $('.photo_album_tool_bar')[0].children[1];
+    var tool_grid = $('.photo_album_tool_bar')[0].children[0];
+    var tool_slide = $('.photo_album_tool_bar')[0].children[1];
 
     var sliderWrap = $('.photo_album_content_centered');
     var slider = $('.photos_list');
@@ -16,16 +16,16 @@ function Slider(slider) {
     var leftArrow = $('.arrow_left');
     var rightArrow = $('.arrow_right');
 
-    if ($(window)[0].innerWidth >= 770) {
-        sliderWrap.show();
-        galleryWrap.hide();
-        $(tool_slide).addClass('active');
-    } 
-    else {
-        galleryWrap.show();
-        sliderWrap.hide();
-        $(tool_grid).addClass('active');
-    }
+    // if ($(window)[0].innerWidth >= 770) {
+    //     sliderWrap.show();
+    //     galleryWrap.hide();
+    //     $(tool_slide).addClass('active');
+    // }
+    // else {
+    galleryWrap.show();
+    sliderWrap.hide();
+    $(tool_grid).addClass('active');
+    // }
     sliderWrap.removeClass('loading-width');
     galleryWrap.removeClass('loading-width');
 
@@ -124,7 +124,7 @@ function Slider(slider) {
     }
 
     this.initHorizontalScroll = function() {
-    
+
     }
 
     this.initGalleryClickEvents = function() {
